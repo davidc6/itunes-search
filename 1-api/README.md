@@ -15,12 +15,12 @@ Use the following endpoint to query the API:
 - Make response "less nested" e.g. `{ status: 200, items: [], total: 12 }`
 - Move test fixtures to a separate location
 - Prettier
-- Scale Node.js application by utilising all cores on a machine
+- Scale Node.js application by utilising all cores on a machine / clustering
 - Finalise tests
 - Better error handling
-- Security (checking query string)
+- Security (e.g. checking query string)
 - Protecting the API (api keys, tokens etc)
-- Logging
+- Logging (ELK) - elastic, logstash, kibana
 - Dockerize for deployment and local development
-- Env specific configuration
+- Env specific configuration (local, test, prod)
 - Redis / Memcached for caching

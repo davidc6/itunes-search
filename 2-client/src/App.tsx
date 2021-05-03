@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './App.css'
 import { Body } from './components/Body';
 import { Search } from './components/Search';
 
@@ -8,6 +9,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <h1>iTunes search</h1>
       <Search setAlbums={setAlbums} setArtist={setArtist} />
       <Body albums={albums} artist={artist} />
     </div>

@@ -28,4 +28,11 @@ Use the following url to view the app:
 
 ### Future improvements to Client
 
-- 
+- Add react query library for fetching and caching data
+- Add more tests
+- Improve state passing
+- Split into smaller components
+- Use Sass to make use of variables and functions
+- Make mobile friendly
+- Make more accessible
+- Add spinner / loader to give visual feedback to users when loading content

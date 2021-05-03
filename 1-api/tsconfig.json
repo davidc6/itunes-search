@@ -1,0 +1,16 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "sourceMap": false,
+    "resolveJsonModule": true,
+    "target": "ESNext",
+    "typeRoots": ["node_modules/@types"],
+    "types": ["mocha"]
+  },
+  "include": ["src/**/*.ts", "src/.bin/www.ts", "test"],
+  "exclude": ["node_modules"]
+}

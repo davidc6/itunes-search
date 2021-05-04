@@ -29,7 +29,7 @@ Use the following url to view the app:
 ### Future improvements to Client
 
 - Add react query library for fetching and caching data
-- Add more tests
+- Add more unit (fine-grained) tests (individual components testing) apart from the currently existing integration tests
 - Improve state passing
 - Split into smaller components
 - Use Sass to make use of variables and functions

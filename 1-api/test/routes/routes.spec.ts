@@ -2,7 +2,7 @@ import { expect } from "chai"
 import nock from "nock"
 import sinon from "sinon"
 import supertest from "supertest"
-import NodeCache from "node-cache"
+import { cache } from "../../src/components/cache"
 
 import app from "../../src/index"
 
@@ -56,8 +56,8 @@ describe("routes", () => {
   })
   
   beforeEach(() => {
-    sandbox.stub(NodeCache.prototype, 'get').returns(undefined)
-    sandbox.stub(NodeCache.prototype, 'set').returns(undefined)
+    sandbox.stub(cache, 'get').returns(undefined)
+    sandbox.stub(cache, 'set').returns(true)
   })
   
   after(() => {
@@ -91,7 +91,7 @@ describe("routes", () => {
         .reply(404)
       nock('https://itunes.apple.com').get('/lookup?entity=album&id=32940')
         .reply(404)
-
+        
       const res = await supertest(app).get('/search?term=michael+jackson')            
       expect(res.body.status).to.equal(404)
       expect(res.body.message).to.equal('Sorry, something went wrong')

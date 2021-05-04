@@ -1,11 +1,11 @@
 import axios from "axios"
-import NodeCache from "node-cache"
+import { CacheClient } from "../types"
 import { hash } from "../utils/hash"
 
 /**
  * A basic abstraction that can be used to swap http libraries
  */
-const createAxiosClient = (cache: NodeCache) => {
+const createAxiosClient = (cache: CacheClient) => {
   let client = axios.create({
     timeout: 2000
   })
@@ -15,9 +15,9 @@ const createAxiosClient = (cache: NodeCache) => {
       const key = hash(url)
       const cachedData: any = cache.get(key)
       
-      if (cachedData) {        
+      if (cachedData) {
         return {
-          data: cachedData,
+          data: cachedData.data,
           statusCode: 200
         }
       }

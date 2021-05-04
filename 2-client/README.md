@@ -36,3 +36,4 @@ Use the following url to view the app:
 - Make mobile friendly
 - Make more accessible
 - Add spinner / loader to give visual feedback to users when loading content
+- Be more strict / add types to responses

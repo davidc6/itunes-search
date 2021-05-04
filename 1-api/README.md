@@ -2,6 +2,10 @@
 
 To build and start the API - `cd` into `1-api` and run these commands `npm run build && npm start`
 
+To access - [http://localhost:8080](http://localhost:8080)
+
+To run tests - `yarn test` or `npm run test`
+
 Use the following endpoint to query the API:
 
 - `GET /search?term=<artist_name>` (e.g. `/search?term=michael+jackson`) - returns a list of albums

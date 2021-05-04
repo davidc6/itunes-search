@@ -1,30 +1,12 @@
-# Client
+# iTunes search client
 
 Client is built using `create-react-app`
 
-## Available Scripts
+To build and start the client - `cd` into `2-client` and run this commands `npm run start` or `yarn start`
 
-In the project directory, you can run:
+To access - [http://localhost:3000](http://localhost:3000)
 
-### `yarn start` or `npm run start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-# iTunes search API and client
-
-## API
-
-To build and start the API - `cd` into `1-api` and run these commands `npm run build && npm start`
-
-Use the following url to view the app:
-
-- `http://localhost:3000/`
+To run tests - `yarn test` / `npm run test`
 
 ### Future improvements to Client
 

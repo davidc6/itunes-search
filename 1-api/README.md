@@ -28,4 +28,5 @@ Use the following endpoint to query the API:
 - Dockerize for deployment and local development
 - Env specific configuration (local, test, prod)
 - Redis / Memcached for caching
-- Look  into converting `any` types to more structured types
+- Look into converting `any` types to more structured types
+- Optimise hashing to use shorter cache keys to use less space

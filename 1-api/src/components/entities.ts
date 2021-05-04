@@ -1,10 +1,9 @@
 import { dedupCollections } from "../utils/dedup"
-import client from "../components/httpClient"
-import { Artist } from "../types"
+import { Artist, HttpClient } from "../types"
 
 const BASE_URL = 'https://itunes.apple.com';
 
-const getFirstArtist = async (searchTerm: string, httpClient: ReturnType<typeof client.createAxiosClient>): Promise<Artist> => {
+const getFirstArtist = async (searchTerm: string, httpClient: HttpClient): Promise<Artist> => {
   const path = `/search?media=music&entity=musicArtist&limit=1&${searchTerm}`
   const url = `${BASE_URL}${path}`
 
@@ -23,7 +22,7 @@ const getFirstArtist = async (searchTerm: string, httpClient: ReturnType<typeof 
   }
 }
 
-const getAlbumsByArtistId = async (artistId: string, httpClient: ReturnType<typeof client.createAxiosClient>) => {
+const getAlbumsByArtistId = async (artistId: string, httpClient: HttpClient) => {
   if (!artistId) {
     return []
   }

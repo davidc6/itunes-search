@@ -1,10 +1,10 @@
 # iTunes search API
 
-To build and start the API - `cd` into `1-api` and run these commands `npm run build && npm start`
+To build and start the API - `cd` into `1-api` and run these commands `npm run build && npm start`.
 
-To access - [http://localhost:8080](http://localhost:8080)
+To access - [http://localhost:8080](http://localhost:8080).
 
-To run tests - `yarn test` or `npm run test`
+To run tests - `yarn test` or `npm run test`.
 
 Use the following endpoint to query the API:
 

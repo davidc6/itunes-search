@@ -3,9 +3,6 @@ import { cache } from "./cache";
 import { hash } from "../utils/hash"
 import { CacheClient } from "../types"
 
-/**
- * A basic abstraction that can be used to swap http libraries
- */
 const createAxiosClient = (cache: CacheClient) => {
   let config: AxiosRequestConfig = {
     timeout: 2000
@@ -13,7 +10,6 @@ const createAxiosClient = (cache: CacheClient) => {
   const client = axios.create()
 
   return {
-    // useful for setting a separate config per route / request
     setConfig: (customConfig: AxiosRequestConfig) => {
       config = customConfig
     },
@@ -29,13 +25,17 @@ const createAxiosClient = (cache: CacheClient) => {
       }
 
       try {        
-        const data = await client.get(url, config)
-
-        cache.set(key, { data: data.data, statusCode: data.status })
+        const response = await client.get(url, config)
+        const { data, status } = response
+        
+        cache.set(key, {
+          data: data,
+          statusCode: status
+        })
 
         return {
-          data: data.data,
-          statusCode: data.status
+          data: data,
+          statusCode: status
         }
       } catch (e) {
         throw(e)

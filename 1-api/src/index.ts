@@ -12,8 +12,6 @@ app.use(cors())
 
 mountRoutes(app)
 
-// error handling middleware should come last
-// ref: https://expressjs.com/en/guide/error-handling.html
 app.use(errorHandler)
 
 export default app

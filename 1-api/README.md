@@ -21,7 +21,7 @@ Use the following endpoint to query the API:
 - Prettier
 - Scale Node.js application by utilising all cores on a machine / clustering
 - Finalise tests
-- Better error handling
+- Better error handling (create a custom error handler class that extends `Error` class)
 - Security (e.g. checking query string)
 - Protecting the API (api keys, tokens etc)
 - Logging (ELK) - elastic, logstash, kibana
@@ -30,3 +30,5 @@ Use the following endpoint to query the API:
 - Redis / Memcached for caching
 - Look into converting `any` types to more structured types
 - Optimise hashing to use shorter cache keys to use less space
+- Add Nginx (or any other technology) in front as a reverse proxy to provide an additional level of abstraction to improve security and add load balancing functionality
+- Move routes logic into controllers to avoid bloating routes file 

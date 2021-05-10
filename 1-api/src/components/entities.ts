@@ -1,5 +1,5 @@
-import { dedupCollections } from "../utils/dedup"
-import { Artist, HttpClient } from "../types"
+import { isNotADuplicate } from "../utils/filter"
+import { Artist, Collection, HttpClient } from "../types"
 
 const BASE_URL = 'https://itunes.apple.com';
 
@@ -22,7 +22,7 @@ const getFirstArtist = async (searchTerm: string, httpClient: HttpClient): Promi
   }
 }
 
-const getAlbumsByArtistId = async (artistId: string, httpClient: HttpClient) => {
+const getAlbumsByArtistId = async (artistId: string, httpClient: HttpClient): Promise<[] | Collection[]> => {
   if (!artistId) {
     return []
   }
@@ -33,8 +33,8 @@ const getAlbumsByArtistId = async (artistId: string, httpClient: HttpClient) => 
   try {
     const response = await httpClient.get(url)
     
-    if (Array.isArray(response.data.results)) {
-      return response.data.results.filter(dedupCollections({}))
+    if (Array.isArray(response.data.results)) {      
+      return response.data.results.filter(isNotADuplicate())
     }
 
     return []

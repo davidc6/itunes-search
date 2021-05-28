@@ -1,8 +1,21 @@
-.Search {
+.search {
+	margin: 0 auto;
 	padding-top: 10px;
+	width: 50%;
 }
 
-.Search-input {
+.search-input {
+	-webkit-box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.26);
+	box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.26);
+	border: none;
+	border-radius: 4px;
+	font-size: 20px;
 	padding: 10px;
 	width: 100%;
+}
+
+.search-input:focus-visible {
+	outline: none;
+	transform: scale(1.1);
+	transition: ease-out 1s ease-in 1s;
 }

@@ -34,8 +34,8 @@ const Search = ({ setAlbums, setArtist }: { setAlbums: Dispatch<SetStateAction<n
   }
 
   return (
-    <div className="Search">
-      <input placeholder="Enter artist name" aria-label="search-input" className="Search-input" onChange={handleSearch} />
+    <div className="search">
+      <input placeholder="Enter artist name" aria-label="search-input" className="search-input" onChange={handleSearch} />
     </div>
   )
 }

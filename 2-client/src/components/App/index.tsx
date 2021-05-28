@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import { Body } from './components/Body';
-import { Search } from './components/Search';
+import { Body } from '../Body';
+import { Search } from '../Search';
 
 const App = () => {
   const [albums, setAlbums] = useState([])
